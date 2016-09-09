@@ -14,7 +14,8 @@ function root(args) {
   return path.join.apply(path, [__dirname].concat(args));
 }
 
-function webpackConfig(options = {}) {
+function webpackConfig(options) {
+  options = options || {};
 
   return {
     context: root(),
